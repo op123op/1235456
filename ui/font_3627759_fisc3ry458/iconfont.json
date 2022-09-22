@@ -1,0 +1,51 @@
+{
+  "id": "3627759",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3867976",
+      "name": "笑脸",
+      "font_class": "xiaolian",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "3872056",
+      "name": "笑脸",
+      "font_class": "xiaolian1",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "30178406",
+      "name": "分类",
+      "font_class": "fenlei",
+      "unicode": "100da",
+      "unicode_decimal": 65754
+    },
+    {
+      "icon_id": "765262",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "17605434",
+      "name": "阅读",
+      "font_class": "yuedu",
+      "unicode": "e810",
+      "unicode_decimal": 59408
+    },
+    {
+      "icon_id": "17605456",
+      "name": "知识",
+      "font_class": "zhishi",
+      "unicode": "e813",
+      "unicode_decimal": 59411
+    }
+  ]
+}
