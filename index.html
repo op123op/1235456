@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./js/bootstrap.min.css">
+    <!-- <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script> -->
+    
 </head>
 <script>
     window.onload=function(){
@@ -13,20 +17,21 @@
         var cnt=document.querySelector('.cnt');
         var stat=document.querySelector('.stat');
         var resting=document.querySelector('.resting');
+        var span=document.querySelector('span')
         let timmer=null;
         stat.onclick=function(){
             var num=0;
             if(timmer===null){
                 timmer=setInterval(()=>{
-                    num+=Math.floor(Math.random()*30+5);
+                    num+=Math.floor(Math.random()*20+5);
                     progress.style.width=num;
-                    if(num>=400){                     
+                    if(num>=100){                     
                         clearInterval(timmer);
-                        num=400;
+                        num=100;
                         timmer=null;
                     }
-                    progress.style.width=num+'px';
-                    cnt.innerText=num/4;
+                    progress.style.width=num+'%';
+                    cnt.innerText=num;
                 },500)
             } 
         }
@@ -40,26 +45,49 @@
     
 </script>
 <style>
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    body{
+        background-color: rgb(214,213,183);
+    }
+    .box{
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
     .progressBar{
-        width:400px;
-        margin: 0 0 5px 0;
-        border: 2px solid red;
-        background-color: orange;
+        width:100%;
+        margin: 0 0 10px 0;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: white;  
     }
     .progress{
-        width:0px;
+        width:0%;
+        border-radius: 15px;
         line-height: 40px;
         height: 40px;
-        background-color: yellow;
+        background-image: linear-gradient(to left bottom,#FF0000,#FFF200,#1E9600);
     }
 </style>
 <body>
-    <div class="progressBar">
-        <div class="progress">
-            <span class="cnt">0</span><span>%</span>
+    <div class="box">
+        <div style="width: 100%;">
+            <div class="progressBar">
+                <div class="progress">
+                    <div class="span">
+                        <span class="cnt">0</span><span>%</span>
+                    </div>
+                </div>
+            </div>
+        
+            <button class="stat btn btn-primary">开始</button>
+            <button class="btn btn-primary resting">重置</button>
         </div>
     </div>
-    <button class="stat">开始</button>
-    <button class="resting">重置</button>
 </body>
 </html>
