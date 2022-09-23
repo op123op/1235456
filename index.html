@@ -23,7 +23,7 @@
             var num=0;
             if(timmer===null){
                 timmer=setInterval(()=>{
-                    num+=Math.floor(Math.random()*20+5);
+                    num+=Math.floor(Math.random()*10+5);
                     progress.style.width=num;
                     if(num>=100){                     
                         clearInterval(timmer);
@@ -83,8 +83,10 @@
     }
 </style>
 <body>
+    
     <div class="box">
         <div style="width: 100%;">
+            <iframe src="./时钟.html" frameborder="0" style="width: 500px;"></iframe>
             <div class="progressBar">
                 <div class="progress">
                     <div class="span">
