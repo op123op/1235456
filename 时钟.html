@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时钟</title>
+</head>
+<style>
+    ul{
+        list-style-type: none;
+    }
+    ul>li{
+        width: 50px;
+        height: 80px;
+        border: 1px solid slategrey ;
+        border-radius: 10px;
+        box-shadow: 0px -5px 15px 0px #ff0000, 
+        0px 0px 0px 0px #fff, 
+			6px 0px 15px 0px #2279ee, 
+			0px 0px 0px 0px #fff;
+        font-size: 50px;
+        text-align: center;
+        float: left;
+    }
+    body{
+        /* height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+    ul .frist{
+        box-shadow: 0px -5px 10px 0px #ff0000, 
+			0px 0px 0px 0px #fff, 
+			6px 0px 6px 0px #2279ee, 
+			0px 5px 19px 0px #eede15 !important;
+    }
+    /* box-shadow: 0px -5px 10px 0px #ff0000, 
+			-6px 0px 6px 0px #3bee17, 
+			6px 0px 6px 0px #2279ee, 
+			0px 5px 19px 0px #eede15; */
+    ul .last{
+        box-shadow: 0px -5px 10px 0px #ff0000, 
+			0px 0px 0px 0px #fff, 
+			6px 0px 6px 0px #2279ee, 
+			0px 5px 19px 0px #eede15 !important;
+    }
+</style>
+<body>
+    <ul>
+        <li class="frist">1</li>
+        <li>1</li>
+        <li>:</li>
+        <li>2</li>
+        <li>1</li>
+        <li>:</li>
+        <li>4</li>
+        <li class="last">3</li>
+    </ul>
+    <script>
+            var li=document.querySelectorAll('li');
+            var hours=null;
+            var minties=null;
+            var miao=null;
+            var data=null;
+            function getTime(){
+                data=new Date();
+                hours=data.getHours().toString();
+                hours=hours<10?'0'+hours:hours;
+                minties=data.getMinutes().toString();
+                minties=minties<10?'0'+minties:minties;
+                miao=data.getSeconds().toString();
+                miao=miao<10?'0'+miao:miao; 
+                li[0].innerText=hours.charAt(0);
+                li[1].innerText=hours.charAt(1);
+                li[3].innerText=minties.charAt(0);
+                li[4].innerText=minties.charAt(1);
+                li[6].innerText=miao.charAt(0);
+                li[7].innerText=miao.charAt(1);
+                console.log(hours+':'+minties+':'+miao);
+            }
+                setInterval(()=>{getTime()},1000)
+            
+    </script>
+</body>
+</html>
