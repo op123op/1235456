@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        position: relative;
+    }
+    div span{
+        color: red;
+        position: absolute;
+        top: 0%;
+        border: 2px solid red;
+    }
+    div img{
+        width: 100px;
+        position: absolute;
+        left: 20px;
+    }
+</style>
+<body>
+    <div>
+        <span>×</span>
+        <img src="./img/淘宝/O1CN01GZ8Gm51DHyo7asI5m_!!6000000000192-2-tps-160-160.png_.webp" alt="">
+    </div>
+    <script>
+        var div=document.querySelector('div');
+        var cha=document.querySelector('span');
+        cha.onclick=function(){
+            div.style.display='none';
+        }
+    </script>
+</body>
+</html>

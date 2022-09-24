@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    ul{       
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    div{
+        width: 150px;
+        height: 150px;
+    }
+    ul li{
+        display: inline-block;
+        /* background-position:0 -40px; */
+        
+    }
+    a{
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        background:url(./img/淘宝/20200524173639597.jpg) no-repeat;
+    }
+</style>
+<body>
+    <div>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </div>
+    <script>
+        var a=document.querySelectorAll('a');
+        console.log(a);
+        for (let index = 0; index < a.length; index++) {
+            a[index].href='https://www.baidu.com/';
+            var i=index*44;
+            a[index].style='background-position:0 -'+i+'px';
+        }
+    </script>
+</body>
+</html>
